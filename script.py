@@ -1,4 +1,3 @@
-# Created by Muhammad Suleiman Qureshi
 #Possible Parameter to change
 #Whether or not to show EDI in the Schedule
 drop_EDI = True
@@ -48,7 +47,7 @@ def plot_schedule(file_path):
     ax.set_yticklabels(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
     ax.xaxis.set_major_locator(mdates.MinuteLocator(interval=15))  # Set major locator for 15-minute intervals
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%I:%M %p"))
-    plt.xticks(rotation=90)
+    plt.xticks(rotation=90, fontsize = 8)
     # Define the start time at 8:15 AM
     start_time = datetime.combine(datetime.today(), datetime.min.time()) + timedelta(hours=8, minutes=15)
     
@@ -69,7 +68,7 @@ def plot_schedule(file_path):
     
     ax.set_xlabel("Time")
     ax.set_ylabel("Day of Week")
-    ax.set_title("Schedule of " + subfolder_name+ (" No EDI" if (drop_EDI) else " With EDI"))
+    ax.set_title("Schedule of " + subfolder_name+ (" No EDI" if (drop_EDI) else " With EDI"), loc = 'center', wrap = True)
     # plt.legend()
     plt.savefig("Schedule of " + subfolder_name + ".png", dpi=300)
     # plt.show()
