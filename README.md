@@ -21,7 +21,7 @@ The images for every project (with the folder/project name) will be given in the
 Steps:
 1. Step up the main folder and download the script. 
 2. Add folders for every project.
-3. To the relevant folders, export the .csv schedule from UniTime of the relevant students.
+3. To the relevant folders, export the .csv schedule from UniTime of the relevant students. (Additional Step: For Ramadan Timings, kindly only download the week that has Ramadan included (Click on All matching weeks and select the correct week)).
 4. Run the script.
 5. All group schedules will be visible in the main folder.
 
